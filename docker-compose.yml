@@ -1,0 +1,28 @@
+version: '3.5'
+services:
+  app:
+    build: .
+    container_name: puppy_app
+    depends_on:
+    - db
+    ports:
+      - "80:80"
+    volumes:
+      - .:/var/www/html/
+    stdin_open: true
+    tty: true
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: puppy
+      MYSQL_USER: puppy
+      MYSQL_PASSWORD: puppy
+      MYSQL_ROOT_PASSWORD: puppy
+    ports:
+      - "3306:3306"
+  admin:
+    image: adminer
+    container_name: puppy_adminer
+    ports:
+    - "8080:8080"
