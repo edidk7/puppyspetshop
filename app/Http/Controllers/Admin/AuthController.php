@@ -20,6 +20,7 @@ class AuthController extends Controller
             'password' => 'required'
         ]);
 
+        // Intento login
         if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password])) {
             $request->session()->regenerate();
 
