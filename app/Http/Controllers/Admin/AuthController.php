@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -35,5 +36,12 @@ class AuthController extends Controller
                 'details' => 'Credenciales incorrectas, por favor intente nuevamente.'
             ], 200);
         }
+    }
+
+    public function logout()
+    {
+        Auth::guard('admin')->logout();
+        Session::flush();
+        return redirect()->route('/');
     }
 }

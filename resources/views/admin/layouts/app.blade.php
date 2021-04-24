@@ -38,7 +38,7 @@
                             </v-col>
                             <v-col cols="12" class="ma-0 px-10 py-5">
                                 <span class="user_data">
-                                    {{-- {{ Auth::guard('admin')->user()->fullName }} --}}
+                                    {{ Auth::guard('admin')->user()->fullName }}
                                     Administrador
                                 <br>
                                 </span>
@@ -53,7 +53,7 @@
                             </v-col>
                             <v-col cols="12" class="ma-0 px-10 py-5">
                                 <span class="user_data">
-                                    <v-btn :block="true" color="#000" text>Cerrar Sesión</v-btn>
+                                    <v-btn href="{{ route('admin.login.logout') }}" :block="true" color="#000" text>Cerrar Sesión</v-btn>
                                 </span>
                             </v-col>
                         </v-row>
