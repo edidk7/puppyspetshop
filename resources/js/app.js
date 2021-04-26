@@ -8,10 +8,8 @@ import es from 'vuetify/src/locale/es.ts';
 import 'vuetify/dist/vuetify.min.css'
 import '@mdi/font/css/materialdesignicons.css'
 
-// import LoginComponent from './components/admin/LoginComponent.vue';
-// import CompanyTableComponent from './components/admin/CompanyTableComponent.vue';
-// import ProductTableComponent from './components/admin/ProductTableComponent.vue';
-// import ProductFormComponent from './components/admin/ProductFormComponent.vue';
+import ProductPrincipal from './components/ProductPrincipal';
+import ProductSale from './components/ProductSale';
 
 import ExampleComponent from './components/ExampleComponent';
 
@@ -33,6 +31,8 @@ const vuetify = new Vue({
     }),
     components: {
         'example-component': ExampleComponent,
+        'producto-principal': ProductPrincipal,      
+        'product-sale': ProductSale,        
         // 'login-component': LoginComponent,
         // 'company-table-component': CompanyTableComponent,
         // 'product-table-component': ProductTableComponent,
