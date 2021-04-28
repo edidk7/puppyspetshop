@@ -80058,7 +80058,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/salamancaj/Development/Laravel/puppyspetshop/resources/js/admin.js */"./resources/js/admin.js");
+module.exports = __webpack_require__(/*! C:\Users\Daniel Duarte\puppys\resources\js\admin.js */"./resources/js/admin.js");
 
 
 /***/ })
